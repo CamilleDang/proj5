@@ -14,17 +14,14 @@ stage 1 *num_inference_steps* = 20, stage 2 *num_inference_steps* = 20
 
 stage 1 *num_inference_steps* = 40, stage 2 *num_inference_steps* = 50
 
-
 |<img width="400" src="paint12.png"> |  <img width="400" src="paint22.png"> | <img width="400" src="paint23.png"> |
 
 stage 1 *num_inference_steps* = 5, stage 2 *num_inference_steps* = 5
   
-|:-------------------------:|:-------------------------:|:-------------------------:|
 |<img width="400" src="paint13.png"> |  <img width="400" src="paint3man.png"> | <img width="400" src="paint3rocket.png"> |
 
 stage 1 *num_inference_steps* = 10, stage 2 *num_inference_steps* = 10
   
-|:-------------------------:|:-------------------------:|:-------------------------:|
 |<img width="400" src="paint4village.png"> |  <img width="400" src="paint4man.png"> | <img width="400" src="paint4village.png"> |
 
 Thoughts:
