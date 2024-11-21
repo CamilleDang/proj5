@@ -159,19 +159,31 @@ Example 3: **Hand-Drawn Image** of a Flower!
 
 ## 1.8: Visual Anagrams
 
+
+
 | Oil Painting of an Old Man | Oil Painting of People Around a Campfire | 
 |:-------------------------:|:-------------------------:|
 |<img width="500" src="mancampfire.png"> |  <img width="500" style="transform: scaleY(-1);" src="mancampfire.png"> |
 
-| Photo of Amalfi Coast | Photo of Dog| 
+| Photo of Amalfi Coast | Photo of Dog | 
 |:-------------------------:|:-------------------------:|
 |<img width="500" src="amalfidog.png"> |  <img width="500" style="transform: scaleY(-1);" src="amalfidog.png"> |
 
-| Photo of Amalfi Coast | Photo of Dog| 
+| Photo of Pencil | Photo of Rocket Ship | 
 |:-------------------------:|:-------------------------:|
-|<img width="500" src="amalfidog.png"> |  <img width="500" style="transform: scaleY(-1);" src="amalfidog.png"> |
+|<img width="500" src="pencilrocket.png"> |  <img width="500" style="transform: scaleY(-1);" src="pencilrocket.png"> |
 
 ## 1.9 Hybrid Images
+
+**Oil Painting of an Old Man**
+<img width="500" src="mancampfire.png"> 
+
+**Oil Painting of an Old Man**
+<img width="500" src="mancampfire.png"> 
+
+**Oil Painting of an Old Man** 
+<img width="500" src="mancampfire.png"> 
+
 
 
 #  Part B: Diffusion Models from Scratch!
