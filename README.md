@@ -163,15 +163,15 @@ Example 3: **Hand-Drawn Image** of a Flower!
 
 | Oil Painting of an Old Man | Oil Painting of People Around a Campfire | 
 |:-------------------------:|:-------------------------:|
-|<img width="400" src="mancampfire.png"> |  <img width="400" src="mancampfire.png" style="transform: scaleY(-1);" > |
+|<img width="400" src="mancampfire.png"> |  <img width="400" src="mancampfire.png"> |
 
 | Photo of Amalfi Coast | Photo of Dog | 
 |:-------------------------:|:-------------------------:|
-|<img width="400" src="amalfidog.png"> |  <img width="400" src="amalfidog.png" style="transform: scaleY(-1);" > |
+|<img width="400" src="amalfidog.png"> |  <img width="400" src="dogamalfi.png" > |
 
 | Photo of Pencil | Photo of Rocket Ship | 
 |:-------------------------:|:-------------------------:|
-|<img width="400" src="pencilrocket.png"> |  <img width="400" src="pencilrocket.png" style="transform: scaleY(-1);" > |
+|<img width="400" src="pencilrocket.png"> |  <img width="400" src="pencilrocket.png" > |
 
 ## 1.9 Hybrid Images
 
