@@ -176,13 +176,16 @@ Example 3: **Hand-Drawn Image** of a Flower!
 ## 1.9 Hybrid Images
 
 **Oil Painting of an Old Man**
-<img width="500" src="mancampfire.png"> 
+
+<img width="400" src="mancampfire.png"> 
 
 **Oil Painting of an Old Man**
-<img width="500" src="mancampfire.png"> 
+
+<img width="400" src="mancampfire.png"> 
 
 **Oil Painting of an Old Man** 
-<img width="500" src="mancampfire.png"> 
+
+<img width="400" src="mancampfire.png"> 
 
 
 
