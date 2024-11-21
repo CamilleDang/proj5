@@ -6,20 +6,29 @@
 
 In this project, I used a DeepFloyd IF diffusion model, a two stage model trained as a text-to-image model, which takes text prompts as input and outputs images that are aligned with the text. To begin with, I instantiated DeepFloyd's stage_1 and stage_2 objects used for generation, as well as several text prompts for sample generation, which were the following: "An oil painting of a snowy mountain village," " A man wearing a hat," and "A rocket ship". I used random seed 1213, and tried different combinations of __ to generate various versions of images for the same three prompts. Here are the results:
 
-* = 0.5, * = 0.5
+stage 1 *num_inference_steps* = 20, stage 2 *num_inference_steps* = 20
 
 | BAIR Image 1 | BAIR Image 2 | BAIR Image 2 | 
 |:-------------------------:|:-------------------------:|:-------------------------:|
-|<img width="400" src="bair1.jpg"> |  <img width="400" src="bair2.jpg"> | <img width="400" src="bair2.jpg"> |
+|<img width="400" src="paint11.png"> |  <img width="400" src="paint"> | <img width="400" src="bair2.jpg"> |
 
-* = 0.5, * = 0.5
+stage 1 *num_inference_steps* = 40, stage 2 *num_inference_steps* = 50
 
 |<img width="400" src="grove1.jpg"> |  <img width="400" src="grove2.jpg"> | <img width="400" src="bair2.jpg"> |
 
-* = 0.5, * = 0.5
+stage 1 *num_inference_steps* = 5, stage 2 *num_inference_steps* = 5
   
 |:-------------------------:|:-------------------------:|:-------------------------:|
-|<img width="400" src="vlsb1.jpg"> |  <img width="400" src="vlsb2.jpg"> | <img width="400" src="vlsb2.jpg"> |
+|<img width="400" src=""> |  <img width="400" src="paint3man.png"> | <img width="400" src="paint3rocket.png"> |
+
+stage 1 *num_inference_steps* = 10, stage 2 *num_inference_steps* = 10
+  
+|:-------------------------:|:-------------------------:|:-------------------------:|
+|<img width="400" src="paint4village.png"> |  <img width="400" src="paint4man.png"> | <img width="400" src="paint4village.png"> |
+
+Thoughts:
+
+I ran the three text prompts, 'an oil painting of a snowy mountain village', 'a man wearing a hat', and 'a rocket ship' with 4 iterations of different num_inference_steps. The first iteration was with num_inference_steps 20 for both Stage 1 and Stage 2, which produced images that were not very realistic and more "cartoon-like", other than the man in the hat, which was somewhat realistic but almost a bit too soft (painting-like). The second iteration was produced with 40 num_inference_steps for Stage 1 and 50 num_inference_steps for Stage 2, which led to a more realistic representation of the three prompts, which were all very well-made, especially the man in the hat -- I found this one to be the most realistic of them all. For my third iteration, I tried 5 num_inference_steps for both Stage 1 and Stage 2, which led to pretty faulty pictures. The oil painting of the snowy mountain village and the rocket ship were both splotchy and had a fair bit of noise, and the man wearing a hat turned out completely faulty, almost as if there were incomplete inference steps made towards the final image. For my last iteration, I used 10 num_inference_steps for Stage 1 and Stage 2, which resulted in 3 good pictures of the prompts. All 3 of the pictures were less cartoon-like than the first two iterations, and were fairly solid representations.
 
 ## Part 1: Sampling Loops 
 
