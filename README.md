@@ -39,7 +39,7 @@ I implemented the noisy_im = forward(im, t) function, which adds noise to an ima
 
 We can try to use Gaussian blurring to denoise the noisy images, but as we can see, the results do not perform well at denoising the image and recovering the original photo.
 
-| Noisy Image at Timestep 250 | Noisy Image at  Timestep 500 | Noisy Image at  Timestep 750 |
+| Noisy Image at Timestep 250 | Noisy Image at Timestep 500 | Noisy Image at Timestep 750 |
 |:-------------------------:|:-------------------------:|:-------------------------:|
 |<img width="250" src="bair1.jpg"> |  <img width="250" src="bair2.jpg"> | <img width="250" src="bair2.jpg"> | 
 
@@ -84,33 +84,50 @@ and then implemented the function iterative_denoise(image, i_start), which
 
 As we can see, the iteratively denoised and one-step denoised campanile perform much better than the Gaussian-blurred campanile, and the iteratively denoised image more accurately captures details of the campanile than the one-step denoised, albeit not perfectly.
 
-## 1.5 Diffusion Model Sampling
+## 1.5: Diffusion Model Sampling
 
 By using the function I made in the previous part, iterative_denoise(image, i_start), and setting i_start to 0 and passing random noise into the image, we can generate completely new images from scratch. Below are 5 results of a "high quality photo", generated using these steps.
 
 <img width="250" src="bair1.jpg">   <img width="250" src="bair2.jpg">  <img width="250" src="bair2.jpg">  <img width="250" src="bair2.jpg">   <img width="250" src="bair2.jpg"> 
 
-## 1.6 Classifier-Free Guidance (CFG)
+## 1.6: Classifier-Free Guidance (CFG)
+
+We were able to create 5 new images from scratch, but we can create even better quality photos using classifier-free guidance, which reduces hallucination by incorporating both an unconditional and conditional noise estimate. By running the UNet model twice—once with a conditional prompt and once with an empty prompt for the unconditional estimate — I blended the estimates using the formula *noise = noise_uncond + guidance_scale * (noise_cond - noise_uncond)*. For the unconditional generation, I used "a high quality photo" as the prompt to guide the image synthesis process, ensuring that the resulting images are of high quality compared to those generated without CFG. The images produced using this method showed improvements in clarity and detail compared to just diffusion model sampling from the previous part.
+Below are 5 results from using CFG!
+
+<img width="250" src="bair1.jpg">   <img width="250" src="bair2.jpg">  <img width="250" src="bair2.jpg">  <img width="250" src="bair2.jpg">   <img width="250" src="bair2.jpg"> 
+
+## 1.7: Image-to-Image Translation
+
+I applied the Classifier-Free Guidance (CFG) technique from the previous part to edit existing images (rather than creating completely new ones from scratch) by adding noise and then denoising them, leveraging the model's capacity to introduce creative changes. This process, aligned with the SDEdit algorithm, involves noising the original image slightly and then using the iterative_denoise_cfg function to iteratively denoise it, aiming to make subtle edits by forcing the noisy image back onto the natural image manifold. I ran this denoising process at noise levels [1, 3, 5, 7, 10, 20], each reflecting increasing similarity to the original image. The results, labeled by their starting indices, demonstrate a progression of edits, showcasing how the image gradually approximates its original form. Additionally, similar edits were performed on two other test images to validate the robustness of this approach.
+
+## 1.7.1: Editing Hand-Drawn and Web Images
+
+Here are the examples of the 
+
+## 1.7.2: Inpainting
+
+
+
+## 1.7.3: Text-Conditional Image-to-image Translation
+
+
+
+## 1.8: Visual Anagrams
+
+## 1.9 Hybrid Images
+
+
+#  Part B: Diffusion Models from Scratch!
+
+# Part 1: Training a Single-Step Denoising UNet
+
+## 1.1: Implementing the UNet
 
 
 
 ## 1.7 Image-to-image Translation
 
+## 1.7 Image-to-image Translation
 
 
-## 1.7.1 Editing Hand-Drawn and Web Images
-
-## 1.7.2 Inpainting
-
-## 1.7.3 Text-Conditional Image-to-image Translation
-
-## 1.8 Visual Anagrams
-
-## 1.9 Hybrid Images
-
-
-#  Part 2. Recover Homographies
-
-After shooting these pairs of images, I selected 8 correspondence points for each image.
-I then wrote a function to compute the homography matrix, given a set of 4+ points for two images. 
-Here's an example of correspondence points I picked for the nature images:
