@@ -192,7 +192,7 @@ Example 3: Prompted with "A Photo of the Amalfi Coast" on Image of House on the 
 
 | Amalfi Coast, Noise Level 1 | Amalfi Coast, Noise Level 3 | Amalfi Coast, Noise Level 5 | Amalfi Coast, Noise Level 7 | Amalfi Coast, Noise Level 10 | Amalfi Coast, Noise Level 20 | Original House on the Mountains |
 |:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|
-|<img width="200" src="amalfimountain1.png"> |  <img width="200" src="amalfimountain3.png"> | <img width="200" src="amalfimountain5.png"> | <img width="200" src="amalfimountain7.png"> | <img width="200" src="amalfimountain10.png"> | <img width="200" src="amalfimountain20.png"> | <img width="200" src="mountains.png"> |
+|<img width="200" src="amalfimountain1.png"> |  <img width="200" src="amalfimountain3.png"> | <img width="200" src="amalfimountain5.png"> | <img width="200" src="amalfimountain7.png"> | <img width="200" src="amalfimountain10.png"> | <img width="200" src="amalfimountain20.png"> | <img width="200" src="nyc.png"> |
 
 ## 1.8: Visual Anagrams
 
