@@ -168,13 +168,11 @@ Example 2: Inpainting the Eiffel Tower
  
 Example 3: Inpainting a House in the Mountains
 
-| House in the Mountains | Mask | Area to Replace | Inpainted Eiffel Tower |
+| House in the Mountains | Mask | Area to Replace | Inpainted House in the Mountains |
 |:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|
 |<img width="350" src="mountains.png"> |  <img width="350" src="mountainmask.png"> | <img width="350" src="mountainreplace.png"> | <img width="350" src="mountaininpainted.png"> | 
 
 ## 1.7.3: Text-Conditional Image-to-image Translation
-
-
 
 Example 1: Prompted with "A Rocket Ship" on Campanile Image
 
