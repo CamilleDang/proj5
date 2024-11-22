@@ -4,7 +4,7 @@
 
 ### Displaying Precomputed Text Embeddings
 
-In this project, I used a DeepFloyd IF diffusion model, a two stage model trained as a text-to-image model, which takes text prompts as input and outputs images that are aligned with the text. To begin with, I instantiated DeepFloyd's stage_1 and stage_2 objects used for generation, as well as several text prompts for sample generation, which were the following: "An oil painting of a snowy mountain village," " A man wearing a hat," and "A rocket ship". I used random seed 1213, and tried different combinations of __ to generate various versions of images for the same three prompts. Here are the results:
+In this project, I used a DeepFloyd IF diffusion model, a two stage model trained as a text-to-image model, which takes text prompts as input and outputs images that are aligned with the text. To begin with, I instantiated DeepFloyd's stage_1 and stage_2 objects used for generation, as well as several text prompts for sample generation, which were the following: "An oil painting of a snowy mountain village," " A man wearing a hat," and "A rocket ship". I used random seed 1213, and tried different combinations of *num_inference_steps* for both stages to generate various versions of images for the same three prompts. Here are the results:
 
 stage 1 *num_inference_steps* = 20, stage 2 *num_inference_steps* = 20
 
@@ -128,7 +128,9 @@ Example 3: Lantern as Input Image
 
 ## 1.7.1: Editing Hand-Drawn and Web Images
 
-Here are the examples of the 
+Here are the examples of using this image-to-image translation on three examples of non-realistic images, one of which is an image I took from the web (cartoon image of a bee), and a poor attempt at a cartoon flower and cartoon colorful person.
+
+With lower i_start, the resulting images are not great at creating results that look like the original image, but as i_start gets bigger, the resulting image becomes more representatitve of the original image. Looking specifically at Example 3, the flower example wasn't really great but that could be due to the fact that the hand-drawn image I drew wasn't that great. It's still interesting to see the progression of the image looking more like the input image based on more initial information (larger i_start).
 
 Example 1: **Web Image** of a Bee!
 
@@ -148,18 +150,55 @@ Example 3: **Hand-Drawn Image** of a Flower!
 |:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|
 |<img width="200" src="flower1.png"> |  <img width="200" src="flower3.png"> | <img width="200" src="flower5.png"> | <img width="200" src="flower7.png"> | <img width="200" src="flower10.png"> | <img width="200" src="flower20.png"> | <img width="200" src="flower.png"> | 
 
-
 ## 1.7.2: Inpainting
 
+We can use this same logic, but now inpaint a certain part of the image
 
+Example 1: Inpainting the Top of the Campanile
+
+| Campanile | Mask | Area to Replace | Inpainted Campanile |
+|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|
+|<img width="350" src="ogcamp.png"> |  <img width="350" src="campmask.png"> | <img width="350" src="campreplace.png"> | <img width="350" src="campinpainted.png"> | 
+
+Example 2: Inpainting the Eiffel Tower
+
+| Eiffel Tower | Mask | Area to Replace | Inpainted Eiffel Tower |
+|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|
+|<img width="350" src="eiffel.png"> |  <img width="350" src="eiffelmask.png"> | <img width="350" src="eiffelreplace.png"> | <img width="350" src="eiffelinpainted.png"> | 
+ 
+Example 3: Inpainting a House in the Mountains
+
+| House in the Mountains | Mask | Area to Replace | Inpainted Eiffel Tower |
+|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|
+|<img width="350" src="mountains.png"> |  <img width="350" src="mountainmask.png"> | <img width="350" src="mountainreplace.png"> | <img width="350" src="mountaininpainted.png"> | 
 
 ## 1.7.3: Text-Conditional Image-to-image Translation
 
 
 
+Example 1: Prompted with "A Rocket Ship" on Campanile Image
+
+| Rocket Ship, Noise Level 1 | Rocket Ship, Noise Level 3 | Rocket Ship, Noise Level 5 | Rocket Ship, Noise Level 7 | Rocket Ship, Noise Level 10 | Rocket Ship, Noise Level 20 | Original Campanile |
+|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|
+|<img width="200" src="rocketcamp1.png"> |  <img width="200" src="rocketcamp2.png"> | <img width="200" src="rocketcamp3.png"> | <img width="200" src="rocketcamp4.png"> | <img width="200" src="rocketcamp5.png"> | <img width="200" src="rocketcamp6.png"> |
+
+Example 2: Prompted with "A Photo of a Dog" on Image of House on the Mountains
+
+| Dog, Noise Level 1 | Dog, Noise Level 3 | Dog, Noise Level 5 | Dog, Noise Level 7 | Dog, Noise Level 10 | Dog, Noise Level 20 | Original House on the Mountains |
+|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|
+|<img width="200" src="dogwater1.png"> |  <img width="200" src="dogwater2.png"> | <img width="200" src="dogwater3.png"> | <img width="200" src="dogwater4.png"> | <img width="200" src="dogwater5.png"> | <img width="200" src="dogwater6.png"> | <img width="200" src="mountains.png"> |
+
+Example 3: Prompted with "A Photo of the Amalfi Coast" on Image of House on the Mountains
+
+| Amalfi Coast, Noise Level 1 | Amalfi Coast, Noise Level 3 | Amalfi Coast, Noise Level 5 | Amalfi Coast, Noise Level 7 | Amalfi Coast, Noise Level 10 | Amalfi Coast, Noise Level 20 | Original House on the Mountains |
+|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|
+|<img width="200" src="amalfimountain1.png"> |  <img width="200" src="amalfimountain3.png"> | <img width="200" src="amalfimountain5.png"> | <img width="200" src="amalfimountain7.png"> | <img width="200" src="amalfimountain10.png"> | <img width="200" src="amalfimountain20.png"> | <img width="200" src="mountains.png"> |
+
 ## 1.8: Visual Anagrams
 
+In this section, I implemented the Visual Anagrams task using a pretrained diffusion model (UNet) to create optical illusions that display different images depending on their orientation. The process involves denoising a noisy image twice: first with a prompt (e.g., "an oil painting of people around a campfire") to predict noise, and second after flipping  upside-down with a different prompt (e.g., "an oil painting of an old man") to predict noise. After flipping the image back to match the original orientation, the two noise estimates are averaged to produce the final noise, which is then used to denoise.
 
+Shown below are the visual anagrams I created. I show the same image side by side, flipping one of them to show a different prompt!
 
 | Oil Painting of an Old Man | Oil Painting of People Around a Campfire | 
 |:-------------------------:|:-------------------------:|
@@ -175,30 +214,64 @@ Example 3: **Hand-Drawn Image** of a Flower!
 
 ## 1.9 Hybrid Images
 
-**Oil Painting of an Old Man**
+In this section, I made "hybrid images" using a diffusion model and the concept of Factorized Diffusion, where up close, an image looks like a certain prompt, and far away, it looks like a different prompt. This involves creating a composite noise estimate 𝜖 by combining the low frequencies of one noise estimate with the high frequencies of another. To achieve this, I used two separate text prompts to denoise the same noisy image, followed by applying a low-pass filter to the first noise and a high-pass filter to the second noise. The final noise estimate is the sum of the filtered components.
 
-<img width="400" src="mancampfire.png"> 
+Using this method, I generated hybrid images that exhibit different visual features depending on the viewer's distance. For example, in the first result, the image is a "skull" from afar but transforms into waterfalls up close.
 
-**Oil Painting of an Old Man**
+**Example 1: Skull + Waterfalls**
 
-<img width="400" src="mancampfire.png"> 
+Low-pass: 'a lithograph of a skull'
+High-pass: 'a lithograph of waterfalls'
 
-**Oil Painting of an Old Man** 
+<img width="400" src="skullwaterfall.png"> 
 
-<img width="400" src="mancampfire.png"> 
+**Example 2: Mountains + Barista**
 
+Low-pass: 'an oil painting of a snowy mountain village'
+High-pass: 'a photo of a hipster barista'
 
+<img width="400" src="baristamountains.png"> 
+
+**Example 3: Dog + Amalfi Coast**
+
+Low-pass: 'a photo of the amalfi coast'
+High-pass: 'a photo of a dog'
+
+<img width="400" src="amalfianddog.png"> 
 
 #  Part B: Diffusion Models from Scratch!
+
+In this part of the project, I worked on training a diffusion model from scratch on the MNIST dataset.
 
 # Part 1: Training a Single-Step Denoising UNet
 
 ## 1.1: Implementing the UNet
 
+I started by building a simple one-step denoiser, which I implemented as a UNet. This is the model architecture that I followed, as given on the class website.
 
+<img width="500" src="unetarchitecture.png"> 
 
-## 1.7 Image-to-image Translation
+## 1.2 Using the UNet to Train a Denoiser
 
-## 1.7 Image-to-image Translation
+### 1.2.1 Training
+
+In this section, I trained a UNet-based denoiser to map noisy images z to clean images x, using an L2 loss. The noisy images were generated by adding Gaussian noise to clean MNIST digits, scaled by a noise level 𝜎. Here is the visualization of the noising process for various 
+𝜎 values [0.0, 0.2, 0.4, 0.5, 0.6, 0.8, 1.0], showing progressively noisier images.
+
+<img width="500" src="figure3.png"> 
+
+I then trained the UNet model to denoise noisy images z generated by adding Gaussian noise (with noise level = 0.5 to clean MNIST digits. The model was trained on the MNIST training dataset for 5 epochs with a batch size of 256, using the Adam optimizer. A new noisy version of the dataset was created for each batch to improve generalization. The figure below shows the training loss curve, which demonstrates a that the loss steadily decreased over time as the model converged.
+
+<img width="500" src="trainig_losses.png"> 
+
+Here is the input, output, and denoised results (of random images selected from the test set) during training on the 1st and 5th epoch.
+
+Results after the 1st epoch:
+<img width="350" src="figure5.png"> 
+
+Results after the 5st epoch:
+<img width="350" src="figure6.png"> 
+
+### 1.2.2 Out-of-Distribution Testing
 
 
