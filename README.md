@@ -289,28 +289,31 @@ Like we learned in the previous part of this project, iterative denoising works 
 
 To add time conditioning, I slightly adjusted the current UNet architecture, adding 2 FCBlocks positioned like such.
 
-<img width="500" src="timetrainingalg.png"> 
+<img width="500" src="timearc.png"> 
 
 ### 2.2 Training the UNet
 
-In order to train the UNet, I followed this algorithm,
+In order to train the UNet, I followed this algorithm:
 
-<img width="500" src="trainig_losses.png"> 
+<img width="500" src="timetrainingalg.png"> 
 
 ### 2.3: Sampling from the UNet
 
-To sample from the UNet, I implemented this algorithm, resulting in the following results from Epoch 5 and Epoch 20.
+To sample from the UNet, I implemented this algorithm, resulting in the following results from Epoch 5 and Epoch 20 shown below.
 
 Sampling algorithm for Time-Conditioned UNet:
+
 <img width="500" src="timesamplingalg.png"> 
 
 Results after Epoch 5:
+
 <img width="500" src="epoch5time.png"> 
 
 Results after Epoch 20:
+
 <img width="500" src="epoch20time.png">
 
-As we can see, the results look a lot better after
+As we can see, the results improve with successive epochs, and compared to the previous part (without iterative denoising), the results look a lot better after adding time conditioning and iterative denoising, 
 
 ### 2.4: Adding Class-Conditioning to UNet
 
@@ -325,18 +328,23 @@ Here were the results for the training losses:
 To sample from the UNet, I implemented the algorithm shown below, resulting in the following results from Epoch 1, 5, 10, and 20.
 
 Sampling algorithm for Class-Conditioned UNet:
+
 <img width="500" src="classsamplingalg.png"> 
 
 Results after Epoch 1:
+
 <img width="500" src="epoch1class.png"> 
 
 Results after Epoch 5:
+
 <img width="500" src="epoch5class.png"> 
 
 Results after Epoch 10:
+
 <img width="500" src="epoch10class.png"> 
 
 Results after Epoch 20:
+
 <img width="500" src="epoch20class.png">
 
 As we can see, the class-conditioned UNet improves with successive epochs in , and implementing classifier free guidance allows the UNet to produce digits that look slightly different from the MNIST dataset. The results do start to get a bit thicker by Epoch 20.
