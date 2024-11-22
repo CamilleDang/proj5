@@ -284,7 +284,7 @@ I trained the denoiser on noisy images with noise_level 0.5, but we can visualiz
 
 As you can see, the denoised outputs get less effective (more artifacts) as the noise level increases.
 
-<img width="350" src="figure7.png"> 
+<img width="550" src="figure7.png"> 
 
 ## Part 2: Training a Diffusion Model
 
