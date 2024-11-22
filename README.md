@@ -297,6 +297,10 @@ In order to train the UNet, I followed this algorithm:
 
 <img width="500" src="timetrainingalg.png"> 
 
+These were the results for the training losses, which show a successive decrease in loss after training iterations.
+
+<img width="500" src="training_losses_time.png"> 
+
 ### 2.3: Sampling from the UNet
 
 To sample from the UNet, I implemented this algorithm, resulting in the following results from Epoch 5 and Epoch 20 shown below.
