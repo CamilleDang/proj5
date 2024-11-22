@@ -152,7 +152,7 @@ Example 3: **Hand-Drawn Image** of a Flower!
 
 ## 1.7.2: Inpainting
 
-We can use this same logic, but now inpaint a certain part of the image
+We can use this same logic, but now inpaint a certain part of the image and keep the rest of the image intact.
 
 Example 1: Inpainting the Top of the Campanile
 
@@ -173,6 +173,8 @@ Example 3: Inpainting a House in the Mountains
 |<img width="350" src="mountains.png"> |  <img width="350" src="mountainmask.png"> | <img width="350" src="mountainreplace.png"> | <img width="350" src="mountaininpainted.png"> | 
 
 ## 1.7.3: Text-Conditional Image-to-image Translation
+
+We can include a prompt and an input image to give us more control over the images we are generated. Wth larger noise levels, the resulting image starts to look more and more like the original image.
 
 Example 1: Prompted with "A Rocket Ship" on Campanile Image
 
@@ -208,7 +210,7 @@ Shown below are the visual anagrams I created. I show the same image side by sid
 
 | Photo of Pencil | Photo of Rocket Ship | 
 |:-------------------------:|:-------------------------:|
-|<img width="400" src="pencilrocket.png"> |  <img width="400" src="rocketpencil.png" > |
+|<img width="400" src="pencilpencil.png"> |  <img width="400" src="rocketpencil.png" > |
 
 ## 1.9 Hybrid Images
 
