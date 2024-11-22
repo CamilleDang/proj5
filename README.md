@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/2e70e75f-cd5f-402d-bc13-a8127152e54e)#  Project 5: Fun With Diffusion Models!
+# Project 5: Fun With Diffusion Models!
 
 # Part A: The Power of Diffusion Models
 
