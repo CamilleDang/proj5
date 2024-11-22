@@ -118,7 +118,7 @@ Example 2: Autumn City as Input Image
 
 | SDEdit, i_start = 1 | SDEdit, i_start = 3| SDEdit, i_start = 5 | SDEdit, i_start = 7 | SDEdit, i_start = 10 | SDEdit, i_start = 20 | Original Autumn City |
 |:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|
-|<img width="200" src="autumnnoise1.png"> |  <img width="200" src="autumncity3.png"> | <img width="200" src="autumncity5.png"> | <img width="200" src="autumncity7.png"> | <img width="200" src="autumncity10.png"> | <img width="200" src="autumncity20.png"> | <img width="200" src="autumncity.png"> | 
+|<img width="200" src="autumnnoise1.png"> |  <img width="200" src="autumncity3.png"> | <img width="200" src="autumncity5.png"> | <img width="200" src="autumncity7.png"> | <img width="200" src="autumncity10.png"> | <img width="200" src="autumncity20.png"> | <img width="200" src="autumncity.jpg"> | 
 
 Example 3: Lantern as Input Image
 
