@@ -208,7 +208,7 @@ Shown below are the visual anagrams I created. I show the same image side by sid
 
 | Photo of Pencil | Photo of Rocket Ship | 
 |:-------------------------:|:-------------------------:|
-|<img width="400" src="pencilrocket.png"> |  <img width="400" src="rocketpencil.png" > |
+|<img width="400" src="rocketpencil.png"> |  <img width="400" src="pencilrocket.png" > |
 
 ## 1.9 Hybrid Images
 
@@ -219,6 +219,7 @@ Using this method, I generated hybrid images that exhibit different visual featu
 **Example 1: Skull + Waterfalls**
 
 Low-pass: 'a lithograph of a skull'
+
 High-pass: 'a lithograph of waterfalls'
 
 <img width="400" src="skullwaterfall.png"> 
@@ -226,6 +227,7 @@ High-pass: 'a lithograph of waterfalls'
 **Example 2: Mountains + Barista**
 
 Low-pass: 'an oil painting of a snowy mountain village'
+
 High-pass: 'a photo of a hipster barista'
 
 <img width="400" src="baristamountains.png"> 
@@ -233,6 +235,7 @@ High-pass: 'a photo of a hipster barista'
 **Example 3: Dog + Amalfi Coast**
 
 Low-pass: 'a photo of the amalfi coast'
+
 High-pass: 'a photo of a dog'
 
 <img width="400" src="amalfianddog.png"> 
