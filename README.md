@@ -351,14 +351,10 @@ Results after Epoch 20:
 
 <img width="500" src="epoch20class.png">
 
-As we can see, the class-conditioned UNet improves with successive epochs in , and implementing classifier free guidance allows the UNet to produce digits that look slightly different from the MNIST dataset. The results do start to get a bit thicker by Epoch 20.
+As we can see, the class-conditioned UNet improves with successive epochs, and implementing classifier free guidance allows the UNet to produce digits that look slightly different from the MNIST dataset. The results do get thicker and smoother with more and more epochs, and by Epoch 20, the results are maybe a bit too thick.
 
 ## Reflections
 
 Overall, this project was really fun, interactive, and challenging! I learned a lot about diffusion models and generative models. Very cool stuff!
-
-
-
-
 
 
