@@ -200,7 +200,7 @@ Shown below are the visual anagrams I created. I show the same image side by sid
 
 | Oil Painting of an Old Man | Oil Painting of People Around a Campfire | 
 |:-------------------------:|:-------------------------:|
-|<img width="400" src="mancampfire.png"> |  <img width="400" src="mancampfire.png"> |
+|<img width="400" src="campfireman.png"> |  <img width="400" src="mancampfire.png"> |
 
 | Photo of Amalfi Coast | Photo of Dog | 
 |:-------------------------:|:-------------------------:|
