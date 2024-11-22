@@ -208,7 +208,7 @@ Shown below are the visual anagrams I created. I show the same image side by sid
 
 | Photo of Pencil | Photo of Rocket Ship | 
 |:-------------------------:|:-------------------------:|
-|<img width="400" src="pencilrocket.png"> |  <img width="400" src="pencilrocket.png" > |
+|<img width="400" src="pencilrocket.png"> |  <img width="400" src="rocketpencil.png" > |
 
 ## 1.9 Hybrid Images
 
