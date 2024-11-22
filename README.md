@@ -224,7 +224,7 @@ Low-pass: 'a lithograph of a skull'
 
 High-pass: 'a lithograph of waterfalls'
 
-<img width="400" src="skullwaterfall.png"> 
+<img width="300" src="skullwaterfall.png"> 
 
 **Example 2: Mountains + Barista**
 
@@ -232,7 +232,7 @@ Low-pass: 'an oil painting of a snowy mountain village'
 
 High-pass: 'a photo of a hipster barista'
 
-<img width="400" src="baristamountains.png"> 
+<img width="300" src="baristamountains.png"> 
 
 **Example 3: Dog + Amalfi Coast**
 
@@ -240,7 +240,7 @@ Low-pass: 'a photo of the amalfi coast'
 
 High-pass: 'a photo of a dog'
 
-<img width="400" src="amalfianddog.png"> 
+<img width="300" src="amalfianddog.png"> 
 
 #  Part B: Diffusion Models from Scratch!
 
