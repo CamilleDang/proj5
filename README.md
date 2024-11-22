@@ -180,7 +180,7 @@ Example 1: Prompted with "A Rocket Ship" on Campanile Image
 
 | Rocket Ship, Noise Level 1 | Rocket Ship, Noise Level 3 | Rocket Ship, Noise Level 5 | Rocket Ship, Noise Level 7 | Rocket Ship, Noise Level 10 | Rocket Ship, Noise Level 20 | Original Campanile |
 |:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|
-|<img width="200" src="rocketcamp1.png"> |  <img width="200" src="rocketcamp2.png"> | <img width="200" src="rocketcamp3.png"> | <img width="200" src="rocketcamp4.png"> | <img width="200" src="rocketcamp5.png"> | <img width="200" src="rocketcamp6.png"> |
+|<img width="200" src="rocketcamp1.png"> |  <img width="200" src="rocketcamp2.png"> | <img width="200" src="rocketcamp3.png"> | <img width="200" src="rocketcamp4.png"> | <img width="200" src="rocketcamp5.png"> | <img width="200" src="rocketcamp6.png"> | <img width="200" src="ogcamp.png"> |
 
 Example 2: Prompted with "A Photo of a Dog" on Image of House on the Mountains
 
@@ -271,11 +271,11 @@ Here is the input, output, and denoised results (of random images selected from 
 
 Results after the 1st epoch:
 
-<img width="200" src="figure5.png"> 
+<img width="250" src="figure5.png"> 
 
 Results after the 5th epoch:
 
-<img width="200" src="figure6.png"> 
+<img width="250" src="figure6.png"> 
 
 ### 1.2.2: Out-of-Distribution Testing
 
