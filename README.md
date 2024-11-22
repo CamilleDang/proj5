@@ -124,7 +124,7 @@ Example 3: Lantern as Input Image
 
 | SDEdit, i_start = 1 | SDEdit, i_start = 3| SDEdit, i_start = 5 | SDEdit, i_start = 7 | SDEdit, i_start = 10 | SDEdit, i_start = 20 | Original Lantern |
 |:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|
-|<img width="200" src="lantern1.png"> |  <img width="200" src="lantern3.png"> | <img width="200" src="lantern5.png"> | <img width="200" src="lantern7.png"> | <img width="200" src="lantern10.png"> | <img width="200" src="lantern20.png"> | <img width="200" src="festival.png"> | 
+|<img width="200" src="lantern1.png"> |  <img width="200" src="lantern3.png"> | <img width="200" src="lantern5.png"> | <img width="200" src="lantern7.png"> | <img width="200" src="lantern10.png"> | <img width="200" src="lantern20.png"> | <img width="200" src="festival.jpg"> | 
 
 ## 1.7.1: Editing Hand-Drawn and Web Images
 
